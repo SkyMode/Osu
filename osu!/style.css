@@ -1,0 +1,301 @@
+@media screen and (max-width: 1500px){
+}
+
+body{
+  font-family: Verdana, "san-serif";
+}
+
+*{
+  margin: 0 auto;
+}
+
+.head{
+  text-align: center;
+}
+.logo{
+  margin-top: 20px;
+  width: 10%;
+}
+
+ul{
+  position: relative;
+  top: 40px;
+  display: flex;
+  list-style-type: none;
+}
+
+.nav a{
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.nav a:hover{
+  color: #ff66aa;
+  border-bottom: 4px solid #ff66aa;
+  transition: 0.2s;
+}
+
+h2{
+  line-height: 2;
+  margin-top: 100px;
+  margin-left: 60px;
+  font-family: Verdana, "sans-serif";
+  border-left: 8px solid #ff66aa;
+}
+
+.homescreen{
+  width: 60%;
+  height: auto;
+}
+
+.signin{
+  width: 40%;
+}
+
+.song{
+  width: 50%;
+}
+
+.gamemodeselect{
+  width: 50%;
+}
+
+.types{
+  width: 35%;
+}
+
+.solomode{
+  width: 80%;
+}
+
+.container{
+  margin: 0 auto;
+  width: 90%;
+}
+
+.main_view{
+  width: 61%;
+  height: 25rem;
+}
+
+.main_view img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.side_view{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.side_view img{
+  width: 9rem;
+  height: 7rem;
+  object-fit: cover;
+  cursor: pointer;
+  margin:0.5rem;
+}
+
+.multimode{
+  width: 60%;
+}
+
+a.iconlinks{
+  text-decoration: none;
+}
+
+.icon{
+  width: 4%;
+  padding: 4px;  
+}
+
+.icons{
+  padding-top: 20px;
+  padding-bottom: 150px;
+  padding-left: 70px;
+}
+p{
+  line-height: 1.5;
+  margin-left: 70px;
+}
+
+.pic1{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+h3{
+  line-height: 2;
+  margin-top: 10px;
+  margin-left: 60px;
+  font-family: Verdana, "sans-serif";
+  border-left: 8px solid #ff66aa;
+}
+
+#foot{
+  color: white;
+  background-color: #ff66aa;
+	border-top: 2px solid black;
+	padding: 10px;
+	text-align: center;
+}
+
+a.easter{
+  text-decoration: none;
+  color: white;
+}
+
+.content{
+  margin-top: 70px;
+  height: 463.5px;
+  width: 801px;
+  overflow: hidden;
+  position: relative;
+}
+
+.content .images{
+  height: 100%;
+  width: 100%;
+}
+
+.images img{
+  height: 100%;
+  width: 100%;
+}
+
+.btm-slider{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  transform: translateX(-50%);
+}
+
+.btm-slider span{
+  height: 15px;
+  width: 50px;
+  border: 2px solid white;
+  margin: 0 3px;
+  cursor: pointer;
+}
+
+.content .slide{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 45px;
+  height: 45px;
+  border: 2px solid #ff66aa;
+  cursor: pointer;
+  background: rgba(255,255,255,0.2);
+}
+
+.content .slide:hover{
+  background: rgba(255,255,255,0.2);
+}
+.slide span{
+  font-size: 40px;
+  color: #ff66aa;
+  line-height: 41px;
+}
+.content .right{
+  text-align: right;
+  right: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+button{
+  outline: none;
+  cursor: pointer;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: #ff66aa;
+  width: 60px;
+  height: 60px;
+}
+
+.up a{
+  text-decoration: none;
+
+}
+
+.pgup{
+  text-align: right;
+  padding: 20px;
+}
+
+.fa-rocket{
+  color: white;
+}
+
+.darkmode{
+  margin-top: 42px;
+  float: right;
+  margin-right: 40px;
+}
+
+input[type="checkbox"]
+{
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check{
+  position: relative;
+  display: block;
+  width: 40px;
+  height: 20px;
+  background: #ff66aa;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check
+{
+  background: #fff;
+  box-shadow: 0 0 0 5000px #ff66aa;
+  z-index: -1;
+}
+
+.check:before{
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check:before{
+  transform: translate(-50px);
+}
+
+.check:after{
+  content: '';
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background: #ff66aa;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translate(50px)
+}
+
+input[type="checkbox"]:checked ~ .check:after{
+  transform: translate(0px);
+}

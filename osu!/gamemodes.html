@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Game Modes</title>
+    <meta charset="utf-8">
+    <meta name="author" content="Shawn Wong">
+	  <meta name="description" content="Gaming">
+	  <meta name="keywords" content="Gaming, osu!, intro">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script data-ad-client="ca-pub-5851999684377848" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="head">
+        <a href="https://osu.ppy.sh/home" title="Osu logo" target="_blank">
+          <img src="Images/logo.png" class="logo" alt="logo">
+        </a>
+      </div>
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gamemodes.html">Game Modes</a></li>
+          <li><a href="https://osu.ppy.sh/home/download" target="_blank">Download</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <article>
+      <div class="content">
+        <div class="images">
+          <img src="Images/osu.png" class="slideshow" alt="osu">
+          <img src="Images/mania.png" class="slideshow" alt="mania">
+          <img src="Images/catch.png" class="slideshow" alt="catch">
+          <img src="Images/taiko.png" class="slideshow" alt="taiko">
+        </div>
+        <div onclick="side_side(-1)" class="slide left">
+          <span class="fa fa-arrow-left"></span>
+        </div>
+        <div onclick="side_side(1)" class="slide right">
+          <span class="fa fa-arrow-right"></span>
+        </div>
+        <div class="btm-slider">
+          <span onclick="btm_slide(0)"></span>
+          <span onclick="btm_slide(1)"></span>
+          <span onclick="btm_slide(2)"></span>
+          <span onclick="btm_slide(3)"></span>
+        </div>
+      </div>
+      
+      <h2>Game Modes</h2>
+        <p>In the game modes option, there are play, edit, options, and exit.</p>
+        <div class="pic1">
+          <img src="Images/gamemodeselect.png" class="gamemodeselect" alt="gamemodeselect">
+        </div>
+        <p>In the play section, there are solo and multi modes.</p>
+          <div class="pic1">
+            <img src="Images/gamemodes.png" class="gamemodes" alt="gamemodes">
+          </div>
+      <h3>Types of Game Modes</h3>
+        <p>There are 4 types of game modes: osu!, osu!mania, osu!catch, osu!taiko.</p>
+          <div class="pic1">
+            <img src="Images/types.png" class="types" alt="types">
+          </div>
+      <h3>Solo Mode</h3>
+        <p>In solo mode, there are songs selection, game mods, and editing songs.</p>
+        <div class="container">
+
+          <div class="main_view">
+              <img src="Images/songselect.png" id="main" alt="songselect">
+          </div>
+    
+          <div class="side_view">
+              <img src="Images/songselect.png" onclick="change(this.src)">
+              <img src="Images/mods.png" onclick="change(this.src)">
+              <img src="Images/edit.png" onclick="change(this.src)">
+          </div>
+        </div>
+
+      <h3>Multi Mode</h3>
+        <p>In multi mode, there is a lobby that contains online users and chat box for online social interation.</p>
+          <div class="pic1"> 
+            <img src="Images/onlineusers.png" class="multimode" alt="onlineusers">
+            <img src="Images/chatbox.png" class="multimode" alt="chatbox">
+          </div>
+          <p>In the multiplayer lobby, you can join/create a multiplayer room for playing with friends.</p>
+          <div class="pic1"> 
+            <img src="Images/multiroom.png" class="multimode" alt="multiroom">
+          </div>
+
+    <script>
+      const change = src => {
+            document.getElementById('main').src = src
+        }
+
+      var indexValue = 0;
+      showImg(indexValue);
+      function btm_slide(e){showImg(indexValue = e);}
+      function side_side(e){showImg(indexValue += e);}
+      function showImg(e){
+        var i;
+        const img = document.getElementsByClassName('slideshow');
+        const slider = document.querySelectorAll('.btm-slider span');
+
+        if(e >= img.length){indexValue = 0}
+        if(e < 0){indexValue = img.length-1}
+        for(i = 0; i < img.length; i++){
+          img[i].style.display = "none";
+        }
+        for(i = 0; i < slider.length; i++){
+          slider[i].style.background = "rgba(255,255,255,0.2)";
+        }
+        img[indexValue].style.display = "block";
+        slider[indexValue].style.background = "white";
+      }
+    </script>
+    </article>
+
+    <div class="pgup">
+      <a href="#top"><button class="up"><span class="fa fa-rocket"></span></button></a>
+    </div>
+
+    <footer id="foot">
+      <p>&copy; Shawn Wong Yi Yu | Last updated: 4 July 2021</p>
+    </footer>
+  </body>
+</html>
